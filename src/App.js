@@ -1,24 +1,41 @@
-import logo from './logo.svg';
-import './App.css';
-
+//import logo from './logo.svg';
+//import './App.css';
+import Login from './Component/Login';
+import Registration from './Component/Registration';
+//import Decreament from './Component/Decreament';
+//import Api from './Component/Api';
+//import UseReducer from './Component/UseReducer';
+//import Useparams from './Component/Useparams';
+import { BrowserRouter,Routes,Route } from 'react-router-dom';
+//import Todolist from './Component/Todolist';
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <div >
+    
+    
+    <BrowserRouter>
+  <Routes>
+  <Route path = "/" element = {<Registration/>}/>
+  <Route path = "/login" element = {<Login/>}/>
+    </Routes>
+  
+  </BrowserRouter>
+
+  {/*
+
+
+<BrowserRouter>
+  <Routes>
+  <Route path = "/" element = {<Api/>}/>
+  <Route path = "/useparam/:id" element = {<Useparams/>}/>
+  </Routes>
+  
+  </BrowserRouter>
+*/}  {/*
+   <Api/>
+  <UseReducer/>
+  */}
+        </div>
   );
 }
 
